@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Corazón flotante — Proyecto Profesional</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main class="container">
+<header class="header">
+<h1>Corazón flotante</h1>
+<p class="subtitle">Animación elegante, accesible y optimizada — HTML, CSS y JS</p>
+</header>
+
+
+<section class="scene" aria-label="Escena principal">
+<div class="card" role="img" aria-label="Corazón flotante decorativo">
+<div class="heart" aria-hidden="true">
+<span class="heart-inner" aria-hidden="true"></span>
+</div>
+
+
+<div class="label-center" id="centerLabel">Ruby</div>
+
+
+<div class="orbit" aria-hidden="true">
+<div class="orbit-name" id="orbitName">TuNombre</div>
+</div>
+</div>
+
+
+<aside class="controls" aria-label="Controles de animación">
+<label for="nameInput">Nombre orbital</label>
+<input id="nameInput" type="text" placeholder="Escribe un nombre" />
+
+
+<div class="btn-row">
+<button id="updateBtn" type="button">Actualizar</button>
+<button id="toggleSpin" type="button">Pausar</button>
+</div>
+
+
+<div class="options">
+<label for="speedRange">Velocidad</label>
+<input id="speedRange" type="range" min="4" max="24" value="12" />
+</div>
+</aside>
+</section>
+
+
+<footer class="footer">
+<small>Diseñado profesionalmente — accesible y responsivo.</small>
+</footer>
+</main>
+
+
+<script src="script.js" defer></script>
+</body>
+</html>

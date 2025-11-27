@@ -1,0 +1,45 @@
+:root{
+.card{width:var(--size);height:var(--size);position:relative;border-radius:20px;padding:16px;background:var(--card-bg);box-shadow:0 12px 40px rgba(2,6,23,0.6);display:flex;align-items:center;justify-content:center}
+
+
+/* Centro: label */
+.label-center{position:relative;z-index:5;font-weight:800;font-size:40px;color:var(--accent);text-transform:uppercase;letter-spacing:1px}
+
+
+/* Corazón: técnicas accesibles y responsivas */
+.heart{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:120px;height:120px;z-index:3;display:block;filter:drop-shadow(0 8px 24px rgba(225,29,72,0.18));animation:float 3.6s ease-in-out infinite}
+.heart-inner{position:absolute;inset:0;border-radius:20px;background:var(--accent);transform:rotate(45deg)}
+/* crear las mitades redondas */
+.heart-inner::before,.heart-inner::after{content:"";position:absolute;width:120px;height:120px;background:var(--accent);border-radius:50%}
+.heart-inner::before{left:0;top:-30px}
+.heart-inner::after{right:-30px;top:0}
+
+
+@keyframes float{0%{transform:translate(-50%,-50%) translateY(0) rotate(-4deg)}50%{transform:translate(-50%,-50%) translateY(-14px) rotate(4deg)}100%{transform:translate(-50%,-50%) translateY(0) rotate(-4deg)}}
+
+
+/* Orbita del nombre */
+.orbit{position:absolute;inset:0;margin:auto;width:calc(var(--size) * 1.45);height:calc(var(--size) * 1.45);pointer-events:none;display:flex;align-items:center;justify-content:center;z-index:2;animation:spin 12s linear infinite}
+.orbit-name{position:absolute;top:8px;left:50%;transform:translateX(-50%);padding:6px 10px;border-radius:999px;font-weight:600;backdrop-filter: blur(4px);background:rgba(255,255,255,0.03);pointer-events:auto}
+
+
+@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+
+
+/* Controles */
+.controls{min-width:260px;display:flex;flex-direction:column;gap:12px}
+.controls label{font-size:13px;opacity:0.9}
+.controls input[type="text"]{padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+.btn-row{display:flex;gap:8px}
+button{padding:10px 12px;border-radius:10px;border:none;background:var(--accent);cursor:pointer;font-weight:700}
+
+
+.options input[type="range"]{width:100%}
+
+
+.footer{margin-top:18px;opacity:0.8}
+
+
+/* Responsivo */
+@media (max-width:920px){:root{--size:300px}.container{padding:18px}.label-center{font-size:32px}}
+@media (max-width:520px){.scene{flex-direction:column}.controls{width:100%;min-width:unset}}}
